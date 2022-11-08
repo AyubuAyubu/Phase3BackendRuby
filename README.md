@@ -29,16 +29,3 @@ To get started, run `bundle install` while inside of this directory.
 | weight      | integer |
 | skin_colour | String  |
 | description | String  |
-
-#### reviews Table
-
-| Column      | Type    |
-| ------ -----| ------- |
-| star_rating | integer |
-| comment     | String  |
-
-### Migrations
-migration for the `reviews` table.
-- A `Review` belongs to a `Dog`, and a `Review` also belongs to a `User`.
-
-

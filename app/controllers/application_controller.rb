@@ -1,6 +1,7 @@
 class ApplicationController <Sinatra::Base
 
     set :default_content_type, 'application/json'
+
     #STUDENT RELATIONS-COME FIRST FOR CRUD
     get '/students' do
         students = Student.all
@@ -49,11 +50,11 @@ class ApplicationController <Sinatra::Base
           technology: params[:technology],
           fees: params[:fees],
           description: params[:description],
-          type: params[:type]
+          study_type: params[:study_type]
         )
         course.to_json
     end
-    
+
     delete '/courses/:id' do
         course = Course.find(params[:id])
         course.destroy

@@ -5,11 +5,11 @@ Course.destroy_all
 Student.destroy_all
 
 puts "Creating Courses"
-course1 = Course.create(name: "Backend Engineer",month:6,technology:"django",fees:140000,description:"Journey to be Backend developer",type:"hybrid")
-course2 = Course.create(name: "Frontend Engineer",month:6,technology:"react",fees:120000,description:"Journey to be Frontend developer",type:"remote")
-course3 = Course.create(name: "Android Developer",month:6,technology:"kotlin",fees:150000,description:"Journey to be Android developer",type:"hybrid")
-course4 = Course.create(name: "Product Designer",month:6,technology:"Adobe XD",fees:110000,description:"Journey to be Product designer",type:"remote")
-course5 = Course.create(name: "Mobile Developer",month:6,technology:"Flutter",fees:130000,description:"Journey to be Flutter Developer",type:"hybrid")
+course1 = Course.create(name: "Backend Engineer",month:6,technology:"django",fees:140000,description:"Journey to be Backend developer",study_type:"hybrid")
+course2 = Course.create(name: "Frontend Engineer",month:6,technology:"react",fees:120000,description:"Journey to be Frontend developer",study_type:"remote")
+course3 = Course.create(name: "Android Developer",month:6,technology:"kotlin",fees:150000,description:"Journey to be Android developer",study_type:"hybrid")
+course4 = Course.create(name: "Product Designer",month:6,technology:"Adobe XD",fees:110000,description:"Journey to be Product designer",study_type:"remote")
+course5 = Course.create(name: "Mobile Developer",month:6,technology:"Flutter",fees:130000,description:"Journey to be Flutter Developer",study_type:"hybrid")
 
 puts "Creating Students"
 student1 = Student.create(
@@ -19,6 +19,7 @@ student1 = Student.create(
     email:"aisha34@gmail.com",
     course_id: course1.id,
     )
+
 student2 = Student.create(
     name: "Omar Salim",
     adm_no:4568,
