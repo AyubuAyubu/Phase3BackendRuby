@@ -1,31 +1,62 @@
-For this project, we'll be working with a dog domain. We'll be focusing on the dog reviews.
+For this project, we'll be working with a student domain. We'll be focusing on student
 
-We have three models: `User`, `Review`, and `Dog`.
+We have two models: `Student`, and `Course`.
 
-For our purposes, a `Dog` has many `User`s, a `User` has many `Dog`s,
-and a `Review` belongs to a `User` and to a `Dog`.
-
-`Dog` - `User` is a many to many relationship.
+For our purposes, a `Course` has many `Student`s, a `Student` has only one `Course`.
 
 ## Instructions
 
 To get started, run `bundle install` while inside of this directory.
 
-#### users Table
+#### Our Project Schema and Tables
+#### courses Table
+`We have use ActiveRecord and Migration to create schema and our tables`
+| Column     | Type   |
+| ------     | ------ |
+| name       | String |
+| month      | Integer|
+| technology | String |
+| fees       | integer|
+| description| String |
+| study_type | String |
 
-| Column  | Type   |
-| ------  | ------ |
-| name    | String |
-| location| String |
-| gender  | String |
-| contact | integer|
-
-#### dogs Table
-
+#### students Table
 | Column      | Type    |
 | ------ -----| ------- |
 | name        | String  |
-| breed       | String  |
-| weight      | integer |
-| skin_colour | String  |
-| description | String  |
+| adm_no      | Integer |
+| class_name  | String  |
+| email       | String  |
+| course_id   | Integer |
+
+#### Sinatra
+We have use sinatra to create our API with different endpoints.
+For Student and Course Relations
+
+`Student Relation`
+base_url=http://localhost:9292
+
+Fetch All Students
+->GET http://localhost:9292/students
+
+Create New Student
+->POST http://localhost:9292/students
+
+Update Student Details(Update Class Name Only)
+->PATCH http://localhost:9292/students/id
+
+Delete a Specific Student on the table
+->DELETE http://localhost:9292/students/id
+
+`Course Relation`
+base_url=http://localhost:9292
+
+Fetch All Courses
+->GET http://localhost:9292/courses
+
+Create New Course
+->POST http://localhost:9292/courses
+
+Delete a Specific Course on the table
+->DELETE http://localhost:9292/courses/id
+
