@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
     #STUDENT RELATIONS-COME FIRST FOR CRUD
     get '/students' do
         students = Student.all
-        students.to_json(only: [:id, :name, :class_name],
+        students.to_json(
              include: { course: { only: [:name, :study_type]}})
     end
 
